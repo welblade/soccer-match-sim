@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_margin"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_home_team_flag"
+            android:layout_width="@dimen/team_flag_width"
+            android:layout_height="@dimen/team_flag_height"
+            android:layout_margin="@dimen/default_margin"
+            android:contentDescription="@string/cd_home_team_flag"
+            app:layout_constraintEnd_toStartOf="@id/tv_team1_score"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_home_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/default_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/iv_home_team_flag"
+            app:layout_constraintStart_toStartOf="@id/iv_home_team_flag"
+            app:layout_constraintTop_toBottomOf="@id/iv_home_team_flag"
+            tools:text="Brazil" />
+
+        <TextView
+            android:id="@+id/tv_team1_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            app:layout_constraintBottom_toBottomOf="@id/tv_x"
+            app:layout_constraintEnd_toStartOf="@id/tv_x"
+            app:layout_constraintTop_toTopOf="@id/tv_x"
+            tools:text="99" />
+
+        <TextView
+            android:id="@+id/tv_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_vs"
+            app:layout_constraintBottom_toBottomOf="@id/iv_home_team_flag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_home_team_flag" />
+
+        <TextView
+            android:id="@+id/tv_team2_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            app:layout_constraintBottom_toBottomOf="@id/tv_x"
+            app:layout_constraintStart_toEndOf="@id/tv_x"
+            app:layout_constraintTop_toTopOf="@id/tv_x"
+            tools:text="99" />
+
+        <ImageView
+            android:id="@+id/iv_away_team_flag"
+            android:layout_width="@dimen/team_flag_width"
+            android:layout_height="@dimen/team_flag_height"
+            android:layout_margin="@dimen/default_margin"
+            android:contentDescription="@string/cd_away_team_flag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_team2_score"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_away_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/default_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/iv_away_team_flag"
+            app:layout_constraintStart_toStartOf="@id/iv_away_team_flag"
+            app:layout_constraintTop_toBottomOf="@id/iv_away_team_flag"
+            tools:text="Germany" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

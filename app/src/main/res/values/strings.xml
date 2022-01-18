@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Soccer Match Sim</string>
+    <string name="txt_vs">x</string>
+    <string name="cd_start_simulate_matches">Start simulate matches</string>
+    <string name="cd_home_team_flag">Home Team flag</string>
+    <string name="cd_away_team_flag">Away Team flag</string>
 </resources>
