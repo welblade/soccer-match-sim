@@ -4,4 +4,5 @@
     <dimen name="half_margin">8dp</dimen>
     <dimen name="team_flag_width">150dp</dimen>
     <dimen name="team_flag_height">100dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
 </resources>
