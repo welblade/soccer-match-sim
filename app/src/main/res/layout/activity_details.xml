@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:theme="@style/Theme.SoccerMatchSim.NoActionBar"
-    tools:context=".DetailsActivity">
+    tools:context=".ui.details.DetailsActivity">
 
   <!-- Adding an image to the prominent top app bar:
        Reference: https://material.io/components/app-bars-top/android#regular-top-app-bar -->

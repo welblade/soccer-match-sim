@@ -1,4 +1,4 @@
-package com.github.welblade.soccermatchsim
+package com.github.welblade.soccermatchsim.ui.details
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
