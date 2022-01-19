@@ -8,7 +8,7 @@ O algorítimo de simulação é simples, utilizando os dados fornecido pela api,
 * [Koin](https://insert-koin.io/docs/quickstart/android/)
 * [Retrofit](https://square.github.io/retrofit/)
 * [Moshi](https://square.github.io/moshi/1.x/)
-* [Picasso](https://square.github.io/picasso/)
+* [Coil](https://coil-kt.github.io/coil/)
 * [Timber](https://jakewharton.github.io/timber/docs/5.x/)
 * Jetpack
   * [SwipeRefreshLayout](https://developer.android.com/jetpack/androidx/releases/swiperefreshlayout?hl=pt-br)
