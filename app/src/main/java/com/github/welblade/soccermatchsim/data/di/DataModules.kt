@@ -1,6 +1,8 @@
 package com.github.welblade.soccermatchsim.data.di
 
 import com.github.welblade.soccermatchsim.data.api.Matches
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.core.context.loadKoinModules
@@ -27,7 +29,8 @@ object DataModules {
                     .build()
             }
             single {
-                MoshiConverterFactory.create()
+                val moshi = Moshi.Builder().addLast(KotlinJsonAdapterFactory()).build()
+                MoshiConverterFactory.create(moshi)
             }
             single {
                 createService<Matches>(get(), get())

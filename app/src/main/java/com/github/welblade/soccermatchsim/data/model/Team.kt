@@ -1,12 +1,14 @@
 package com.github.welblade.soccermatchsim.data.model
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
+@JsonClass(generateAdapter = true)
 data class Team(
-    @field:Json(name = "nome")
+    @Json(name = "nome")
     val name: String,
-    @field:Json(name = "forca")
+    @Json(name = "forca")
     val stars: Int,
-    @field:Json(name = "imagem")
+    @Json(name = "imagem")
     val image: String,
 )
