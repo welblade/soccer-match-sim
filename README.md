@@ -7,11 +7,22 @@ O algorítimo de simulação é simples, utilizando os dados fornecido pela api,
 ###### Bibliotecas adicionadas ao projeto
 * [Koin](https://insert-koin.io/docs/quickstart/android/)
 * [Retrofit](https://square.github.io/retrofit/)
+* Coroutines
+* ViewModel
 * [Moshi](https://square.github.io/moshi/1.x/)
 * [Coil](https://coil-kt.github.io/coil/)
 * [Timber](https://jakewharton.github.io/timber/docs/5.x/)
 * Jetpack
   * [SwipeRefreshLayout](https://developer.android.com/jetpack/androidx/releases/swiperefreshlayout?hl=pt-br)
+  * Coordinatorlayout
+  * ConstraintLayout
+* Firebase
+  * Analytics
+  * Crashlytics
 * [JUnit5](https://github.com/mannodermaus/android-junit5) 
-###### plugin habilitado
-Parceable
+* Kotest Assertions
+###### Plugins habilitados
+* Parceable
+* Junit5
+* Google Services
+* Crashlytics
