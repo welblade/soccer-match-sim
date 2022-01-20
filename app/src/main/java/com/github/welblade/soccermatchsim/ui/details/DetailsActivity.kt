@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.github.welblade.soccermatchsim.databinding.ActivityDetailsBinding
 
+const val EXTRA_MATCH = "extra_match"
 class DetailsActivity : AppCompatActivity() {
     private val binding: ActivityDetailsBinding by lazy {
         ActivityDetailsBinding.inflate(layoutInflater)
