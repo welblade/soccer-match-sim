@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupDataObserver() {
         mainViewModel.state.observe(this) {
             when(it){
-                MainViewModel.State.Loading -> binding.srlMatches.isRefreshing = true;
+                MainViewModel.State.Loading -> binding.srlMatches.isRefreshing = true
                 is MainViewModel.State.Error -> {
                     binding.srlMatches.isRefreshing = false
                     showErrorMessage(it.error.message.toString())
