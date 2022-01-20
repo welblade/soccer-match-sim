@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(binding.root)
         setupRecyclerView()
         setupListeners()
         setupDataObserver()
@@ -53,15 +54,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showErrorMessage(message: String) {
-        Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG).show()
+        Snackbar.make(binding.rvMatches, message, Snackbar.LENGTH_LONG).show()
     }
 
     private fun setupListeners(){
         binding.fabSimulate.setOnClickListener {
-            it.animate().rotation(360f).setDuration(200).setListener(
+            it.animate().rotation(+360f).setDuration(500).setListener(
                 object: AnimatorListenerAdapter(){
                     override fun onAnimationEnd(animation: Animator?) {
                         super.onAnimationEnd(animation)
+                        it.rotation = 0f
                         startMatchesSimulation()
                     }
                 }

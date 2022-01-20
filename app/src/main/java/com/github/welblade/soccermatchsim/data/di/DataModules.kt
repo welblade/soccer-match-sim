@@ -49,7 +49,7 @@ object DataModules {
         factory: MoshiConverterFactory
     ): T {
         return Retrofit.Builder()
-            .baseUrl("https://api.themoviedb.org/3/")
+            .baseUrl("https://welblade.github.io/soccer-match-fake-api/")
             .client(client)
             .addConverterFactory(factory)
             .build()

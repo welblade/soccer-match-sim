@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import coil.transform.CircleCropTransformation
 import com.github.welblade.soccermatchsim.data.model.Match
 import com.github.welblade.soccermatchsim.databinding.ItemMatchBinding
 import com.github.welblade.soccermatchsim.ui.details.DetailsActivity
@@ -25,11 +26,12 @@ class MatchItemAdapter: ListAdapter<Match, MatchItemAdapter.ViewHolder>(DiffCall
     }
 
     fun startSimulation(){
-        for (i in 0..itemCount) {
+        for (i in 0 until itemCount) {
             getItem(i).apply{
-                home.score = Random(home.stars).nextInt()
-                away.score = Random(away.stars).nextInt()
+                home.score = Random.nextInt(0, home.stars)
+                away.score = Random.nextInt(0, away.stars)
             }
+            notifyItemChanged(i)
         }
     }
 
@@ -39,11 +41,15 @@ class MatchItemAdapter: ListAdapter<Match, MatchItemAdapter.ViewHolder>(DiffCall
     class ViewHolder(private val itemMatchBinding: ItemMatchBinding):RecyclerView.ViewHolder(itemMatchBinding.root) {
         fun bind(item: Match){
             itemMatchBinding.apply {
-                ivHomeTeamFlag.load(item.home.image)
+                ivHomeTeamFlag.load(item.home.image) {
+                    transformations(CircleCropTransformation())
+                }
                 tvHomeTeam.text = item.home.name
                 tvTeam1Score.text = item.home.score.toString()
 
-                ivAwayTeamFlag.load(item.away.image)
+                ivAwayTeamFlag.load(item.away.image) {
+                    transformations(CircleCropTransformation())
+                }
                 tvAwayTeam.text = item.away.name
                 tvTeam2Score.text = item.away.score.toString()
 

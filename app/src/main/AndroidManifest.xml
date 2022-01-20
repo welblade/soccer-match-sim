@@ -12,6 +12,7 @@
         android:theme="@style/Theme.SoccerMatchSim" >
         <activity
             android:name=".ui.details.DetailsActivity"
+            android:theme="@style/SoccerMatchSim.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".ui.main.MainActivity"
