@@ -13,7 +13,9 @@ class MatchRepositoryImpl(
             val matches = service.getMatches()
             emit(matches)
         } catch (exception: HttpException) {
-            throw MatchesApiException(exception.message())
+            throw MatchesApiException(exception.response().toString())
+        } catch (exception: Throwable) {
+            throw MatchesApiException(exception.message.toString())
         }
     }
 }

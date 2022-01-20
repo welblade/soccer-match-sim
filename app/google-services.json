@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "946358493824",
+    "project_id": "soccer-match-sim",
+    "storage_bucket": "soccer-match-sim.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946358493824:android:d10fdaa652f4ad1669fc65",
+        "android_client_info": {
+          "package_name": "com.github.welblade.soccermatchsim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946358493824-eqegpdteutg4asj4gjjce4qn4n6ej2oj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbHUG-dCIPMxEVaV5zgs1r9A022O7gsSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946358493824-eqegpdteutg4asj4gjjce4qn4n6ej2oj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
