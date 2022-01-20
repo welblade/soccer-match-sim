@@ -19,6 +19,10 @@ class DetailsActivity : AppCompatActivity() {
 
         loadMatchFromExtra()
     }
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
+    }
 
     private fun loadMatchFromExtra() {
         intent?.extras?.getParcelable<Match>(EXTRA_MATCH)?.let {
