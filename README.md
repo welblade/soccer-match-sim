@@ -12,6 +12,6 @@ O algorítimo de simulação é simples, utilizando os dados fornecido pela api,
 * [Timber](https://jakewharton.github.io/timber/docs/5.x/)
 * Jetpack
   * [SwipeRefreshLayout](https://developer.android.com/jetpack/androidx/releases/swiperefreshlayout?hl=pt-br)
-
+* [JUnit5](https://github.com/mannodermaus/android-junit5) 
 ###### plugin habilitado
 Parceable

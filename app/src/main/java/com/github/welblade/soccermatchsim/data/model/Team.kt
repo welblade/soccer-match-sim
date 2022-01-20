@@ -11,4 +11,5 @@ data class Team(
     val stars: Int,
     @Json(name = "imagem")
     val image: String,
+    val score: Int = 0
 )
