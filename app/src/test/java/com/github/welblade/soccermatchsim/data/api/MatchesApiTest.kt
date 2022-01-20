@@ -17,7 +17,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-internal class MatchesTest {
+internal class MatchesApiTest {
 
     private var server: MockWebServer = MockWebServer().also {
         it.enqueue(
@@ -37,7 +37,7 @@ internal class MatchesTest {
             .baseUrl(baseUrl)
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
-            .create(Matches::class.java)
+            .create(MatchesApi::class.java)
         runBlocking {
             launch {
                 val matches = retro.getMatches()

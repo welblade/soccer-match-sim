@@ -32,11 +32,19 @@
 
       <com.google.android.material.appbar.MaterialToolbar
           android:id="@+id/toolbar"
-          style="@style/Widget.MaterialComponents.Toolbar.Primary"
+          style="@style/Theme.SoccerMatchSim.Toolbar.Primary"
           android:layout_width="match_parent"
           android:layout_height="?attr/actionBarSize"
           android:background="@android:color/transparent"
-          android:elevation="0dp" />
+          android:elevation="0dp"
+          app:title="teste"
+          app:subtitle="teste"
+          />
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="72dp"
+          android:layout_gravity="bottom"
+          android:background="#80000000"/>
 
     </com.google.android.material.appbar.CollapsingToolbarLayout>
 

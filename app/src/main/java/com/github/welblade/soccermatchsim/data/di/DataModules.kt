@@ -1,6 +1,8 @@
 package com.github.welblade.soccermatchsim.data.di
 
-import com.github.welblade.soccermatchsim.data.api.Matches
+import com.github.welblade.soccermatchsim.data.api.MatchesApi
+import com.github.welblade.soccermatchsim.data.repository.MatchRepository
+import com.github.welblade.soccermatchsim.data.repository.MatchRepositoryImpl
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -14,7 +16,11 @@ import timber.log.Timber
 
 object DataModules {
     fun load() {
-        loadKoinModules(networkModule())
+        loadKoinModules(networkModule() + repositoryModule())
+    }
+
+    private fun repositoryModule() = module {
+        single<MatchRepository> { MatchRepositoryImpl(get()) }
     }
 
     private fun networkModule(): Module {
@@ -33,7 +39,7 @@ object DataModules {
                 MoshiConverterFactory.create(moshi)
             }
             single {
-                createService<Matches>(get(), get())
+                createService<MatchesApi>(get(), get())
             }
         }
     }
