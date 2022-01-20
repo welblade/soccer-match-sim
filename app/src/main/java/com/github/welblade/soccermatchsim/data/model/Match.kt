@@ -1,8 +1,11 @@
 package com.github.welblade.soccermatchsim.data.model
 
+import android.os.Parcelable
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 @JsonClass(generateAdapter = true)
 data class Match(
     @Json(name = "descricao")
@@ -13,4 +16,4 @@ data class Match(
     val home: Team,
     @Json(name = "visitante")
     val away: Team,
-)
+) : Parcelable
